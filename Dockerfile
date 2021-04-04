@@ -28,10 +28,10 @@ RUN set -eux; \
        gettext \
        su-exec; \
     npm install; \
-    chmod +x docker/entrypoint.sh; \
+    chmod +x entrypoint.sh; \
     addgroup -g 99 -S taiga; \
     adduser -u 99 -S -D -G taiga -H -h /taiga-events -s /bin/sh taiga; \
     chown -R taiga:taiga /taiga-events
 
 EXPOSE 8888
-ENTRYPOINT ["./docker/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
