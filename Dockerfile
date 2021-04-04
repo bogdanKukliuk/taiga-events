@@ -16,8 +16,8 @@
 FROM node:12-alpine
 LABEL maintainer="support@taiga.io"
 
-COPY . /taiga-events
-WORKDIR /taiga-events
+COPY . taiga-events
+WORKDIR taiga-events
 
 # grab su-exec for easy step-down from root
 # https://github.com/ncopa/su-exec
